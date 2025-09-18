@@ -1,0 +1,21 @@
+##SQL
+instructions for create database in SQL Workbench
+```
+create database customer_service_system_db;
+
+create table ficha (
+id int,
+primary key(id),
+nome varchar(255),
+contato int,
+descricao tinytext
+);
+
+create table usuario (
+id int,
+primary key(id),
+email varchar(255),
+senha varchar(255),
+foreign key(id) references ficha(id)
+);
+```
