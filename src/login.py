@@ -1,0 +1,13 @@
+from tkinter import *
+master = Tk()
+Label(master, text='Email').grid(row=0)
+Label(master, text='Password').grid(row=1)
+entry_email = Entry(master)
+entry_password = Entry(master)
+entry_email.grid(row=0, column=1)
+entry_password.grid(row=1, column=1)
+registrar = Button(master, text="registrar")
+entrar = Button(master, text="entrar")
+registrar.grid(row=2, column=0)
+entrar.grid(row=2, column=1)
+master.mainloop()
