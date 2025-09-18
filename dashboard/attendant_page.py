@@ -1,7 +1,6 @@
 from tkinter import *
 master = Tk()
 master.geometry("500x500")
-master
 
 menu = Menu(master)
 master.config(menu=menu)
