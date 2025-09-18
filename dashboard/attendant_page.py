@@ -20,5 +20,4 @@ Button(text="Editar/Cancelar Consultar", width=25).grid(row=3, column=1)
 Button(text="Listar Consultas", width=25).grid(row=5, column=1)
 Button(text="Relatórios", width=25).grid(row=6, column=1)
 
-
 master.mainloop()
