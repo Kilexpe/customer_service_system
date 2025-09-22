@@ -1,12 +1,16 @@
 from tkinter import *
 import sys
-sys.path.append('MySQL')
+import os
+from tkinter import StringVar
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from database_functions.insert import *
+
+
+master = Tk()
 
 nome_var = StringVar()
 contato_var = StringVar()
 descricao_var = StringVar()
-
-master = Tk()
 
 Label(master, text='Nome').grid(row=0)
 Label(master, text='Contato ').grid(row=1)
@@ -19,7 +23,12 @@ entry_nome.grid(row=0, column=1)
 entry_contato.grid(row=1, column=1)
 entry_descricao.grid(row=2, column=1)
 
-registrar = Button(master, text="registrar", command = database.Insert_Database)
+registrar = Button(
+    master, 
+    text="registrar", 
+    command = lambda: Insert_Database(nome_var, contato_var, descricao_var)
+    )
+
 voltar = Button(master, text="voltar")
 registrar.grid(row=3, column=1)
 voltar.grid(row=3, column=0)
